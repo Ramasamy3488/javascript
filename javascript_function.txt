@@ -366,4 +366,158 @@ javascript
 
 **********************************************************************************
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem() {
+            event.target.remove()
+        }
+    </script>
+</body>
+</html>
+
+*************************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem() {
+            event.target.textContent="Hello"
+        }
+    </script>
+</body>
+</html>
+
+*******************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem(event) {
+           event.target.style.backgroundColor="red"
+        }
+    </script>
+</body>
+</html>
+
+*****************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="myBox" onclick="toggleBackgroundColor()"></div>
+   
+   <script>
+        function toggleBackgroundColor() {
+            var box = document.getElementById('myBox');
+            var currentColor = box.style.backgroundColor;
+            var newColor = '';
+
+    // Check if current background color is lightblue
+    if (currentColor === 'red') {
+        newColor = 'green'; // Change to lightgreen if it's lightblue
+    } else if (currentColor==='green'){
+        newColor = 'yellow'; // Change to lightblue if it's not lightblue
+    }else if (currentColor==='yellow'){
+        newColor = 'black'; // Change to lightblue if it's not lightblue
+    }else if (currentColor==='black'){
+        newColor = 'pink'; // Change to lightblue if it's not lightblue
+    }else if (currentColor==='pink'){
+        newColor = 'blue'; // Change to lightblue if it's not lightblue
+    }else {
+        newColor = 'red'; // Change to lightblue if it's not lightblue
+    }
+
+    box.style.backgroundColor = newColor;
+}
+
+    </script>
+
+
+</body>
+</html>
+
+
+************************************************************************************
+
+
+
+
+
+innerHTML = <h1>HEAD</h1> will work
+textContent = won't work.
+
+
+Different type of selecting an element:
+	queryselector
+	queryselectorAll
+	getElementById
+	getElementByClass
+	getElementByTagName
+	
+
 
