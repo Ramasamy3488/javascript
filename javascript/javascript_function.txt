@@ -1,0 +1,752 @@
+javascript
+
+
+<input id="num1" value="4">
+<input id="num2" value="6">
+<button onclick="resultfunction()">add</button>
+<p id="result">Result</p>
+
+<script>
+    var num1=document.getElementById("num1")
+    var num2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    var a = Number(num1.value)
+    var b = Number(num2.value)
+    var total=a+b   
+
+    function resultfunction(){
+        result.innerHTML=total
+    }
+
+</script>
+
+
+*******************************************************************
+
+
+<input id="num1">
+<input id="num2">
+<button onclick="resultfunction()">add</button>
+<p id="result">Result</p>
+
+<script>
+    var num1=document.getElementById("num1")
+    var num2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    
+    function resultfunction(){
+        var a = Number(num1.value)
+        var b = Number(num2.value)
+        var total=a+b
+        result.innerHTML=total
+    }
+
+</script>
+
+**********************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    var a = Math.random()*10
+    console.log(Math.floor(a))
+
+    </script>
+</body>
+</html>
+
+************************************************************************
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess Number</h1>
+    <input id="guessnumber">
+    <button onclick="check()">Check</button>
+    <p id="result">Enter Number</p>
+
+    <script>
+        var guessnumber=document.getElementById("guessnumber")
+        var result=document.getElementById("result")
+        var randomnumber=Math.floor(Math.random()*10)+1
+        function check(){
+            var enterednumber=guessnumber.value
+            if(enterednumber==randomnumber){
+                console.log("Right")
+                result.textContent="Right"
+            }
+
+            else{
+                console.log("Wrong")
+                result.textContent="Wrong"
+            }
+        }
+
+    </script>    
+</body>
+</html>
+
+**********************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess Number</h1>
+    <input id="guessnumber">
+    <button onclick="check()">Check</button>
+    <p id="result">Enter Number</p>
+    <p id="score">Score : 10</p>
+
+    <script>
+        var guessnumber=document.getElementById("guessnumber")
+        var result=document.getElementById("result")
+        var randomnumber=Math.floor(Math.random()*10)+1
+        var score=document.getElementById("score")
+        var totalscore = 10
+        function check(){            
+            var enterednumber=guessnumber.value
+            if(enterednumber==randomnumber){
+                console.log("Right")
+                result.textContent="Right"
+                alert("WOW YOU WON!!!")
+            }
+
+            else{
+                totalscore=totalscore-1
+                console.log("Wrong")
+                score.textContent="Score : " + totalscore
+                result.textContent="Wrong"
+            }
+        }
+    </script>    
+</body>
+</html>
+
+**************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+    <button onclick="change()">Chenge color</button>
+
+    <script>
+        var box=document.getElementById("box")
+        function change() {
+            box.style.backgroundColor="red"
+        }
+    </script>
+
+</body>
+</html>
+
+****************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+        .widthmax{
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+    <button onclick="change()">Chenge color</button>
+
+    <script>
+        var box=document.getElementById("box")
+        function change() {
+            box.setAttribute("class", "widthmax")
+        }
+    </script>
+
+</body>
+</html>
+
+**********************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            transition: 3s;
+        }
+        .widthmax{
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+    <button onclick="change()">Chenge color</button>
+
+    <script>
+        var box=document.getElementById("box")
+        function change() {
+            box.setAttribute("class", "widthmax")
+        }
+    </script>
+
+</body>
+</html>
+
+******************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="inputbox">
+    <button onclick="update()">button</button>
+    <h1 id="result"></h1>
+
+    <script>
+        var inputbox=document.getElementById("inputbox")
+        var result=document.getElementById("result")
+        function update() {
+            result.textContent=inputbox.value
+        }
+    </script>
+
+</body>
+</html>
+
+*********************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <input id="inputbox" onkeyup="update()">    
+    <h1 id="result"></h1>
+
+    <script>
+        var inputbox=document.getElementById("inputbox")
+        var result=document.getElementById("result")
+        function update() {
+            result.textContent=inputbox.value
+        }
+    </script>
+</body>
+</html>
+
+***********************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="update()">add hello</button>
+    <div id="result"></div>
+
+    <script>
+        var enter = document.getElementById("result")
+
+        function update() {
+            var listitem=document.createElement("h1")
+            listitem.textContent="Hello"
+            enter.append(listitem)
+        }
+    </script>
+</body>
+</html>
+
+********************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn" onclick="update()">Change color</button>
+<script>
+    var btn = document.getElementById("btn")
+    function update() {
+        btn.style.backgroundColor="red"
+    }
+</script>
+</body>
+</html>
+
+*******************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="result">Name</h1>
+    <button onclick="update(event)">John</button>
+    <button onclick="update(event)">Karthick</button>
+    <button onclick="update(event)">Kumar</button>
+    <button onclick="update(event)">Raja</button>
+    <button onclick="update(event)">Rockey</button>
+
+    <script>
+        var result=document.getElementById("result")
+        function update(event) {
+            result.textContent=event.target.textContent
+        }
+    </script>
+</body>
+</html>
+
+**********************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem() {
+            event.target.remove()
+        }
+    </script>
+</body>
+</html>
+
+*************************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem() {
+            event.target.textContent="Hello"
+        }
+    </script>
+</body>
+</html>
+
+*******************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="deleteitem(event)">one</h1>
+    <h1 onclick="deleteitem(event)">two</h1>
+    <h1 onclick="deleteitem(event)">three</h1>
+    <h1 onclick="deleteitem(event)">four</h1>
+    <h1 onclick="deleteitem(event)">five</h1>
+    <h1 onclick="deleteitem(event)">six</h1>
+    <h1 onclick="deleteitem(event)">seven</h1>
+    <h1 onclick="deleteitem(event)">eight</h1>
+    <h1 onclick="deleteitem(event)">nine</h1>
+    <h1 onclick="deleteitem(event)">ten</h1>
+
+    <script>
+        function deleteitem(event) {
+           event.target.style.backgroundColor="red"
+        }
+    </script>
+</body>
+</html>
+
+*****************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="myBox" onclick="toggleBackgroundColor()"></div>
+   
+   <script>
+        function toggleBackgroundColor() {
+            var box = document.getElementById('myBox');
+            var currentColor = box.style.backgroundColor;
+            var newColor = '';
+
+    // Check if current background color is lightblue
+    if (currentColor === 'red') {
+        newColor = 'green'; // Change to lightgreen if it's lightblue
+    } else if (currentColor==='green'){
+        newColor = 'yellow'; // Change to lightblue if it's not lightblue
+    }else if (currentColor==='yellow'){
+        newColor = 'black'; // Change to lightblue if it's not lightblue
+    }else if (currentColor==='black'){
+        newColor = 'pink'; // Change to lightblue if it's not lightblue
+    }else if (currentColor==='pink'){
+        newColor = 'blue'; // Change to lightblue if it's not lightblue
+    }else {
+        newColor = 'red'; // Change to lightblue if it's not lightblue
+    }
+
+    box.style.backgroundColor = newColor;
+}
+
+    </script>
+
+
+</body>
+</html>
+
+
+************************************************************************************
+
+
+
+
+
+innerHTML = <h1>HEAD</h1> will work
+textContent = won't work.
+
+
+Different type of selecting an element:
+	queryselector
+	queryselectorAll
+	getElementById
+	getElementByClass
+	getElementByTagName
+	
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">Hello</div>
+
+    <script>
+        var div = document.querySelector(".one")
+        div.textContent="welcome"
+    </script>
+</body>
+</html>
+
+**********************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">Hello</div>
+
+    <script>
+        var div = document.querySelector("h1")
+        div.textContent="welcome"
+    </script>
+</body>
+</html>
+
+***************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">Hello</div>
+    <div class="one">Hello</div>
+
+    <script>
+        var div = document.querySelectorAll(".one")
+        div.textContent="welcome"
+    </script>
+</body>
+</html>
+
+**********************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">Hello</div>
+    <div class="one">Hello</div>
+
+    <script>
+        var div = document.querySelectorAll("h1")
+        div.textContent="welcome"
+    </script>
+</body>
+</html>
+
+************************************************************************************
+ 
+Var fruits = ["Apple", "Banana", "Orange"]
+console.log(fruits[0])
+for(count=0;count<3;count=count+1){
+	fruits[count]
+}
+
+**************************************************************************************
+
+Var fruits = ["Apple", "Banana", "Orange"]
+console.log(fruits[0])
+for(count=0;count<fruits.length;count=count+1){
+	fruits[count]
+}
+
+***********************************************************************************
+
+append, prepend, insertadjacentHTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> Ram </h1>
+    </div>
+
+    <script>
+        var div = document.querySelector("div")
+        div.prepend("Hello")
+        div.prepend("Hello")
+        div.append("Hello")
+        div.append("Hello")
+    </script>
+</body>
+</html>
+
+***********************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> Ram </h1>
+        <h1> Kumar </h1>
+    </div>
+
+    <script>
+        var div = document.querySelector("div")
+        var h1 = document.createElement("h1")
+        h1.textContent="Hello"
+        div.insertAdjacentElement("beforebegin", h1)
+    </script>
+</body>
+</html>
+
+*************************************************************************
+
+Deleting HTML Elements
+
+remove method
+
+
+*********************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input id="input">
+<button onclick="add()">add</button>
+<ul id="list-container">
+    <li>
+        Hello *****
+        <button onclick="deleteitem(event)"> Delete</button>
+    </li>
+</ul>
+
+<script>
+    var ul = document.getElementById("list-container")
+    var input = document.getElementById("input")
+    function add(){
+        var listitem = document.createElement("li")
+        listitem.innerHTML=input.value + "  *****  "  + "<button onclick='deleteitem(event)'>Delete</button>"
+        ul.append(listitem) 
+    }
+    function deleteitem(event){
+        event.target.parentElement.remove()
+    }
+</script>
+
+</body>
+</html>
+
+****************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input id="input">
+<button onclick="add()">add</button>
+<ul id="list-container">
+    
+</ul>
+
+<script>
+    var ul = document.getElementById("list-container")
+    var input = document.getElementById("input")
+    function add(){
+        var listitem = document.createElement("li")
+        listitem.innerHTML=input.value + "  *****  "  + "<button onclick='deleteitem(event)'>Delete</button>"
+        ul.append(listitem) 
+    }
+    function deleteitem(event){
+        event.target.parentElement.remove()
+    }
+</script>
+
+</body>
+</html>
+
+
+event Handler
+
+*********************************************************************
+
+
+
+
+Event listener
+
+
+
+
